@@ -1,0 +1,24 @@
+Name:                xpc-calc
+Version:             0.1
+Synopsis:            the world's awesomest RPN calculator, powered by XPC.
+Description:         XPC Calc is an RPN calculator which performs the requested mathematical operations out-of-process, specifically in an XPC service. Included are two XPC services -- one written in Objective-C and one written in Haskell. It requires Mac OS 10.7.
+License:             MIT
+License-file:        LICENSE.md
+Author:              Colin Barrett
+Maintainer:          colin@springsandstruts.com
+Homepage:            https://github.com/cbarrett/XPC-Calc
+Copyright:           (c) 2011 Colin Barrett and contributors
+
+Category:            Utils
+Stability:           alpha
+tested-with:         GHC
+Build-type:          Custom
+
+
+-- Extra files to be distributed with the package, such as examples or
+-- a README.
+Extra-source-files:  "Objective-C Service", "XPC Calc.xcodeproj"
+
+Exposed-modules: XPC, HsXPC
+Extensions: ForeignFunctionInterface
+hs-source-dirs: "Haskell Service"
